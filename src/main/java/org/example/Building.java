@@ -1,24 +1,26 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+
 public class Building {
     private Integer mId;
-    private String[] mInitialResidents;
+    private LinkedList<String> mInitialResidents;
 
     public Building(Integer id, String initialResident){
-        String[] s = {initialResident};
-        mInitialResidents = s;
+        mInitialResidents = (LinkedList<String>) Arrays.asList(initialResident);
     }
 
     public Building(Integer id, String[] initialResidents){
-        mInitialResidents = initialResidents;
+        mInitialResidents = (LinkedList<String>) Arrays.asList(initialResidents);
     }
 
     public String[] getInitialResidents(){
-        return mInitialResidents;
+        return (String[]) mInitialResidents.toArray();
     }
 
     public void addResident(String name){
-
+        mInitialResidents.add(name);
     }
 
     public void removeResident(String name){

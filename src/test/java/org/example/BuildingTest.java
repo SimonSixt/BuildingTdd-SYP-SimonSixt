@@ -22,5 +22,22 @@ public class BuildingTest {
         Assert.assertNotNull(building.getInitialResidents());
     }
 
+    @Test
+    public void itShouldGetResident() {
+        Building building = new Building(0, "Name");
 
+        String[] resident = building.getInitialResidents();
+
+        Assert.assertEquals("Name", resident[0]);
+    }
+
+    @Test
+    public void itShouldAddResident() {
+        Building building = new Building(0, "Name1");
+
+        building.addResident("Name2");
+        String[] residents = {"Name1", "Name2"};
+
+        Assert.assertEquals(residents, building.getInitialResidents());
+    }
 }
