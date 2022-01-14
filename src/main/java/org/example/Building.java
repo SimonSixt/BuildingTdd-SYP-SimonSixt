@@ -10,7 +10,7 @@ public class Building {
     }
 
     public Building(Integer id, String[] initialResidents){
-
+        mInitialResidents = initialResidents;
     }
 
     public String[] getInitialResidents(){

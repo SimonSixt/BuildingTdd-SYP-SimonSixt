@@ -12,4 +12,15 @@ public class BuildingTest {
 
         Assert.assertNotNull(building.getInitialResidents());
     }
+
+    @Test
+    public void itShouldCreateResidents() {
+        String[] residents = {"name1", "name2"};
+
+        Building building = new Building(0, residents);
+
+        Assert.assertNotNull(building.getInitialResidents());
+    }
+
+
 }
